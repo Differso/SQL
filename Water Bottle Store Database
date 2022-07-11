@@ -1,0 +1,29 @@
+--Create a Water bottle store database
+
+CREATE TABLE 'Watershop' (Id integer primary key, Name text, 'Size in Oz' integer, Color text, Price integer);
+
+INSERT INTO 'Watershop' VALUES
+(1,'Twist',40,'Black',23.99),
+(2,'Twist',40,'White',23.99),
+(3,'Twist',40,'Grey',23.99),
+(4,'Twist',40,'Navy',23.99),
+(5,'Twist',32,'Black',20.99),
+(6,'Twist',32,'Grey',20.99),
+(7,'Twist',32,'White',20.99),
+(8,'Flip',20,'Black',19.99),
+(9,'Flip',20,'White',19.99),
+(10,'Flip',20,'Grey',19.99),
+(11,'Flip',20,'Navy',19.99),
+(12,'Coffee',16,'Stainless',18.99),
+(13,'Coffee',16,'Ceramic',21.99),
+(14,'Coffee',12,'Stainless',16.99),
+(15,'Coffee',12,'Ceramic',19.99);
+
+--display the database ordered by price
+SELECT * FROM 'Watershop' ORDER BY Price;
+
+--Count of each Name
+SELECT Name, COUNT(*) FROM 'Watershop' GROUP BY Name;
+
+--Count of each color
+SELECT Color, Count(*) FROM 'Watershop' GROUP BY Color;
